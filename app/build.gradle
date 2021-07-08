@@ -59,7 +59,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //屏幕适配文档：https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md
-    implementation 'me.jessyan:autosize:1.2.1'
+    implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
 
     //自己测试nitpick的项目
     implementation 'com.github.YXY1109:JitpackDemo:1.0.0'
