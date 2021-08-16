@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="32pt"
+    android:layout_height="42pt"
+    android:layout_marginBottom="10pt"
+    android:background="@mipmap/tuoyuan2"
+    tools:ignore="Overdraw">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5pt"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="66"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/white"
+        android:textSize="18pt" />
+
+</RelativeLayout>

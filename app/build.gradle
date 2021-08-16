@@ -63,4 +63,7 @@ dependencies {
 
     //自己测试nitpick的项目
     implementation 'com.github.YXY1109:JitpackDemo:1.0.0'
+
+    //https://github.com/PhilJay/MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
