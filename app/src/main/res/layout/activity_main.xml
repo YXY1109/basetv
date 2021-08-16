@@ -4,25 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart_wendu"
-        android:layout_width="match_parent"
-        android:layout_height="400pt"
-        android:layout_marginHorizontal="50pt"
+    <Button
+        android:id="@+id/btn_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="折线图"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart_shidu"
-        android:layout_width="match_parent"
-        android:layout_height="400pt"
-        android:layout_marginHorizontal="50pt"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btn_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="折线图2"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chart_wendu" />
+        app:layout_constraintTop_toBottomOf="@id/btn_line" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

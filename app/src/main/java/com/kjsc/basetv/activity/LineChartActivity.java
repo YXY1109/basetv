@@ -1,10 +1,10 @@
-package com.kjsc.basetv;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.kjsc.basetv.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -15,6 +15,8 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
+import com.kjsc.basetv.R;
+import com.kjsc.basetv.databinding.ActivityLineChartBinding;
 import com.kjsc.basetv.databinding.ActivityMainBinding;
 import com.kjsc.basetv.mpandroid.MyMarkerView;
 import com.kjsc.basetv.mpandroid.MyMarkerView2;
@@ -22,8 +24,8 @@ import com.kjsc.basetv.mpandroid.MyMarkerView2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
+public class LineChartActivity extends AppCompatActivity {
+    private ActivityLineChartBinding binding;
 
     //折线图-温度数据
     private int[] mLableYHeartRate_wendu = new int[]{11, 13, 15, 18, 35, 40, 26, 23, 19, 34, 24, 3};
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(LayoutInflater.from(this));
+        binding = ActivityLineChartBinding.inflate(LayoutInflater.from(this));
         setContentView(binding.getRoot());
         initLineChart(binding.chartShidu, 0);//湿度
         initLineChart(binding.chartWendu, 1);//温度
@@ -48,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         chart.setDescription(null);
 
         if (chart_type == 0) {//湿度
-            MyMarkerView2 mv = new MyMarkerView2(MainActivity.this, R.layout.custom_marker_view2);
+            MyMarkerView2 mv = new MyMarkerView2(LineChartActivity.this, R.layout.custom_marker_view2);
             mv.setChartView(chart);
             chart.setMarker(mv);
         } else {//温度
-            MyMarkerView mv = new MyMarkerView(MainActivity.this, R.layout.custom_marker_view);
+            MyMarkerView mv = new MyMarkerView(LineChartActivity.this, R.layout.custom_marker_view);
             mv.setChartView(chart);
             chart.setMarker(mv);
         }
